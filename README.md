@@ -16,6 +16,27 @@ Backend часть для интернет-магазина. В магазине
 8. Запустите docker-контейнер с MailHog `docker run --name mailhog -p 8025:8025 -p 1025:1025 mailhog/mailhog `
 9. Запустите скрипт выполнив `poetry run python manage.py runserver`
 
+## Пример .env
+
+#### Django-App
+* DEBUG=Режим отладки(False - выключен, True - включен)
+* SECRET_KEY=Cекретный ключ для Django
+* ALLOWED_HOSTS=Список доменов, которые может обслуживать это приложение
+
+#### DB-config
+* POSTGRES_DB=internet_shop
+* POSTGRES_USER=Имя пользователя от БД
+* POSTGRES_PASSWORD=Пароль от БД
+* POSTGRES_HOST=localhost
+* POSTGRES_PORT=5432
+
+#### Minio config
+
+* MINIO_ENDPOINT=http://localhost:9000
+* BUCKET_NAME=fittin
+* ACCESS_KEY=ROOTUSER
+* SECRET_KEY=CHANGEME123
+
 ## Описание эндпоинтов
 
 * `Get` -> `/products` -> Получение товаров по категории. `query_string` для фильтрации - category_id, min_price,
