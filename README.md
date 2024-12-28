@@ -121,3 +121,4 @@ Backend часть для интернет-магазина. В магазине
 * PostgreSQL
 * Redis
 * Unit test
+* MailHog для локального тестирования SMTP-сервера
